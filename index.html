@@ -4,29 +4,33 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
 
-  <!-- PWA basics -->
+  <!-- PWA hooks -->
   <link rel="manifest" href="manifest.json" />
   <meta name="theme-color" content="#0d5faf" />
 
-  <!-- iOS/Safari extras -->
+  <!-- iOS / Safari extras -->
   <meta name="apple-mobile-web-app-capable" content="yes" />
   <meta name="apple-mobile-web-app-status-bar-style" content="default" />
   <link rel="apple-touch-icon" href="icon-192.png" />
 
   <title>Kipwise Team Hub</title>
 
-  <!-- Register the service-worker as soon as possible -->
+  <!-- Register the service-worker ASAP -->
   <script>
     if ('serviceWorker' in navigator) {
       navigator.serviceWorker.register('sw.js');
     }
   </script>
 
-  <!-- Minimal styling so users see a message while waiting -->
+  <!-- Simple styling while the shell loads -->
   <style>
-    body{font-family:sans-serif;display:flex;flex-direction:column;
-         justify-content:center;align-items:center;height:100vh;
-         margin:0;background:#f7f9fc;color:#0d5faf;text-align:center}
+    body{
+      font-family:sans-serif;
+      display:flex;flex-direction:column;
+      justify-content:center;align-items:center;
+      height:100vh;margin:0;
+      background:#f7f9fc;color:#0d5faf;text-align:center
+    }
     a{color:#0d5faf;font-weight:600}
   </style>
 </head>
@@ -37,11 +41,11 @@
      <a href="https://kipwise.com/app/teams/T04JNHV1FTJ/">tap here</a>.
   </p>
 
-  <!-- Wait long enough for the PWA shell to register, then jump -->
+  <!-- Give browsers ~4 s to mark the page installable -->
   <script>
     setTimeout(() => {
       location.href = "https://kipwise.com/app/teams/T04JNHV1FTJ/";
-    }, 4000);   // 4 seconds
+    }, 4000);
   </script>
 </body>
 </html>
