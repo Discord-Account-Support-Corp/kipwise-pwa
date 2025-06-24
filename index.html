@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#0d5faf" />
+  <link rel="manifest" href="manifest.json" />
+  <script>
+    if ('serviceWorker' in navigator) {
+      navigator.serviceWorker.register('sw.js');
+    }
+  </script>
+  <title>Kipwise PWA</title>
+</head>
+<body>
+  <script>
+    // Redirect instantly to your Kipwise Team URL
+    location.replace("https://kipwise.com/app/teams/T04JNHV1FTJ/");
+  </script>
+</body>
+</html>
