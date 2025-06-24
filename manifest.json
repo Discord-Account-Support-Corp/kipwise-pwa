@@ -1,20 +1,12 @@
 {
-  "name": "Kipwise Team Hub",
-  "short_name": "Kipwise",
-  "start_url": "/",
-  "display": "standalone",
+  "name":        "Kipwise Team Hub",
+  "short_name":  "Kipwise",
+  "start_url":   ".",
+  "display":     "standalone",
   "background_color": "#ffffff",
-  "theme_color": "#0d5faf",
+  "theme_color":      "#0d5faf",
   "icons": [
-    {
-      "src": "icon-192.png",
-      "sizes": "192x192",
-      "type": "image/png"
-    },
-    {
-      "src": "icon-512.png",
-      "sizes": "512x512",
-      "type": "image/png"
-    }
+    { "src": "icon-192.png", "sizes": "192x192", "type": "image/png" },
+    { "src": "icon-512.png", "sizes": "512x512", "type": "image/png" }
   ]
 }
