@@ -2,43 +2,46 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="theme-color" content="#0d5faf" />
-  <meta name="apple-mobile-web-app-capable" content="yes">
-  <meta name="apple-mobile-web-app-status-bar-style" content="default">
-  <link rel="apple-touch-icon" href="icon-192.png">
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+
+  <!-- PWA basics -->
   <link rel="manifest" href="manifest.json" />
+  <meta name="theme-color" content="#0d5faf" />
+
+  <!-- iOS/Safari extras -->
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+  <link rel="apple-touch-icon" href="icon-192.png" />
+
+  <title>Kipwise Team Hub</title>
+
+  <!-- Register the service-worker as soon as possible -->
   <script>
     if ('serviceWorker' in navigator) {
       navigator.serviceWorker.register('sw.js');
     }
   </script>
-  <title>Kipwise PWA</title>
+
+  <!-- Minimal styling so users see a message while waiting -->
   <style>
-    body {
-      font-family: sans-serif;
-      text-align: center;
-      padding-top: 20%;
-      background-color: #f7f9fc;
-      color: #0d5faf;
-    }
-    a {
-      display: inline-block;
-      margin-top: 1em;
-      color: #0d5faf;
-      font-weight: bold;
-      text-decoration: underline;
-    }
+    body{font-family:sans-serif;display:flex;flex-direction:column;
+         justify-content:center;align-items:center;height:100vh;
+         margin:0;background:#f7f9fc;color:#0d5faf;text-align:center}
+    a{color:#0d5faf;font-weight:600}
   </style>
 </head>
-<body>
-  <h2>This is the Kipwise Team Hub</h2>
-  <p>The app will open shortly. If not, <a href="https://kipwise.com/app/teams/T04JNHV1FTJ/">click here</a>.</p>
 
+<body>
+  <h2>Redirecting to your Kipwise workspace…</h2>
+  <p>If nothing happens after a few seconds,&nbsp;
+     <a href="https://kipwise.com/app/teams/T04JNHV1FTJ/">tap here</a>.
+  </p>
+
+  <!-- Wait long enough for the PWA shell to register, then jump -->
   <script>
     setTimeout(() => {
       location.href = "https://kipwise.com/app/teams/T04JNHV1FTJ/";
-    }, 4000); // wait 4 seconds to allow PWA install logic to trigger
+    }, 4000);   // 4 seconds
   </script>
 </body>
 </html>
