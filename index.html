@@ -11,11 +11,32 @@
     }
   </script>
   <title>Kipwise PWA</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      text-align: center;
+      padding-top: 20%;
+      background-color: #f7f9fc;
+      color: #0d5faf;
+    }
+    a {
+      display: inline-block;
+      margin-top: 1em;
+      color: #0d5faf;
+      font-weight: bold;
+      text-decoration: underline;
+    }
+  </style>
 </head>
 <body>
+  <h2>Redirecting to Kipwise Team Hub...</h2>
+  <p>If you are not redirected automatically, <a href="https://kipwise.com/app/teams/T04JNHV1FTJ/">click here</a>.</p>
+
   <script>
-    // Redirect instantly to your Kipwise Team URL
-    location.replace("https://kipwise.com/app/teams/T04JNHV1FTJ/");
+    // Automatic redirect after short delay
+    setTimeout(() => {
+      location.href = "https://kipwise.com/app/teams/T04JNHV1FTJ/";
+    }, 1500);
   </script>
 </body>
 </html>
